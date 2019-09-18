@@ -5,8 +5,8 @@ konfirmasi_pemilik = 0
 villa_list = []
 reservasi_list = []
 
-#main
-def (file_name:str)-> None:
+#main function
+def akun():
     
     infile = open(file_name, 'r')
     data = infile.readlines()
@@ -15,7 +15,7 @@ def (file_name:str)-> None:
         line = line.strip()
         line_reader(line)
 
-def (l: str) -> None:
+def pemesanan():
     command = l[:2].upper()
     rest_of_input = l[2:].strip()
     if command == '':
