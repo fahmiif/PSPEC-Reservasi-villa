@@ -1,0 +1,43 @@
+Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> 
+konfirmasi_pemilik = 0
+villa_list = []
+reservasi_list = []
+
+#main
+def (file_name:str)-> None:
+    
+    infile = open(file_name, 'r')
+    data = infile.readlines()
+    infile.close()
+    for line in data:
+        line = line.strip()
+        line_reader(line)
+
+def (l: str) -> None:
+    command = l[:2].upper()
+    rest_of_input = l[2:].strip()
+    if command == '':
+        pass;
+    elif command == 'Menambahkan Vlla':
+        add_villa(rest_of_input)
+    elif command == 'Melihat Villa':
+        display_villa_list()
+    elif command == 'Memilih Villa':
+        print_line(rest_of_input)
+    elif command == 'Membatalkan':
+        delete_villa(rest_of_input)
+    elif command == 'Memesan':
+        new_reservasi(rest_of_input)
+    elif command == 'Menyetujui pemesanan Villa':
+        display_reservasi_list()
+    elif command == 'Menmbatlkan Pesanan':
+        delete_reservasi(rest_of_input)
+    elif command == 'Menyetujui Persyaratan pemesanan':
+        reservasi_by_villa(rest_of_input)
+    elif command == 'Data Diri pemesan':
+        reservasi_by_guest(rest_of_input)
+
+def ():
+    return 'Villa telah berhasil dipesan'
